@@ -1,0 +1,50 @@
+---
+# Alternate CSS rules for dark homepage
+---
+
+.site-header {
+  background-image: linear-gradient(
+    black,rgba(0,0,0,0)
+  );
+}
+
+.site-header a {
+  color: #fff;;
+}
+
+.site-header a:hover {
+  color: #fff;
+}
+
+.site-header nav a {
+  color: #fff;
+}
+
+.site-header nav a:hover,
+.site-header nav a:focus,
+.site-header nav a:active {
+  color: #fff;
+  border-bottom: 2px solid #fff;
+}
+
+.bgimg {
+  background-image: url("/images/background/DSCF2150.jpg");
+  background-size: 100%;
+  background-attachment: fixed;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  height:100%;
+  width:100%;
+  opacity:0.4;
+}
+
+body.site {
+  background-color: #000;
+}
+
+footer {
+  background-color: rgba(0,0,0,0);
+  color: #fff;
+  border-top: #000;
+}
