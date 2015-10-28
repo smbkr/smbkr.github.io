@@ -3,8 +3,8 @@ title:       smbkr.com
 email:       bakermstuart@gmail.com
 author:      Stuart Baker
 description: "description of site, from _config.yml"
-baseurl:     "/"
-url:         "http://smbkr.github.io"
+baseurl:     ""
+url:         "http://smbkr.github.io/"
 date_format: "%b %-d, %Y"
 
 # Collections
