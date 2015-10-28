@@ -62,8 +62,6 @@ redcarpet:
 permalink:    pretty
 paginate:     4
 sass:
-  compressed: false
-gems:
-    - jekyll-minifier
-exclude: [Gemfile, Gemfile.lock, LICENSE.txt, Rakefile]
+  compressed: true
+exclude: [Gemfile, Gemfile.lock]
 timezone: Europe/London
