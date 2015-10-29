@@ -65,3 +65,5 @@ sass:
   compressed: true
 exclude: [Gemfile, Gemfile.lock]
 timezone: Europe/London
+gems:
+  - jekyll-sitemap
