@@ -1,5 +1,5 @@
 # Site settings
-title:       smbkr.com
+title:       Stuart Baker
 email:       bakermstuart@gmail.com
 author:      Stuart Baker
 description: "description of site, from _config.yml"
@@ -60,7 +60,7 @@ markdown:     kramdown
 redcarpet:
   extensions: ['smart', 'tables', 'with_toc_data']
 permalink:    pretty
-paginate:     4
+# paginate:     4
 sass:
   compressed: true
 exclude: [Gemfile, Gemfile.lock]
