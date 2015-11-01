@@ -33,8 +33,12 @@
   border-bottom: 2px solid $x-blue-mid;
 }
 
-.site-nav a + a {
-  margin-left: 1em;
+.site-nav a {
+  margin-right: 1em;
+}
+
+.site-nav a:last-child {
+  margin-right: 0em;
 }
 
 .site-header a:hover,
