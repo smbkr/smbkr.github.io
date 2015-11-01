@@ -5,26 +5,42 @@ permalink: /contact/
 ---
 
 <div class="py2">
-  {% if site.ajaxify_contact_form %}
     <form class="form-stacked">
-      <input type="text" name="email" class="field-light" placeholder="Email Address">
+      <input type="text" name="_replyto" class="field-light" placeholder="your@emailaddre.ss">
       <textarea type="text" name="content" class="field-light" rows="5" placeholder="What would you like to say?"></textarea>
-      <input type="hidden" name="_subject" value="New submission!" />
+      <input type="hidden" name="_subject" value="New email from {{ site.url }}" />
       <input type="text" name="_gotcha" style="display:none" />
       <button type='submit' class="button button-blue button-big mobile-block">Say Hello</button>
     </form>
-  {% else %}
-    <form action="https://formspree.io/{{ site.email }}" method="POST" class="form-stacked">
-      <input type="text" name="email" class="field-light" placeholder="Your email address">
-      <textarea type="text" name="content" class="field-light" rows="5" placeholder="What would you like to say?"></textarea>
-      <input type="hidden" name="_next" value="{{ site.baseurl }}/thanks/" />
-      <input type="hidden" name="_subject" value="New submission from smbkr.com" />
-      <input type="text" name="_gotcha" style="display:none" />
-      <input type="submit" class="button button-blue button-big mobile-block" value="Say Hello">
-    </form>
-  {% endif %}
 </div>
 
-{% if site.ajaxify_contact_form %}
-  {% include ajaxify_content_form.html %}
-{% endif %}
+<script>
+    var contactForm = document.querySelector('form'),
+    inputEmail = contactForm.querySelector('[name="_replyto"]'),
+    textAreaMessage = contactForm.querySelector('[name="content"]'),
+    sendButton = contactForm.querySelector('button');
+
+    sendButton.addEventListener('click', function(event){
+      event.preventDefault();
+
+      sendButton.innerHTML = 'sending..';
+
+      var xhr = new XMLHttpRequest();
+      xhr.open('POST', '//formspree.io/{{ site.email }}', true);
+      xhr.setRequestHeader("Accept", "application/json")
+      xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
+
+      xhr.send(
+        "email=" + inputEmail.value +
+        "&message=" + textAreaMessage.value);
+
+      xhr.onloadend = function (res) {
+        if (res.target.status === 200){
+          sendButton.innerHTML = 'Your message has been sent!';
+        }
+        else {
+          sendButton.innerHTML = 'Sorry, the message could not be sent.';
+        }
+      }
+    });
+</script>
