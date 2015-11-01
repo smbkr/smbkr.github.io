@@ -2,22 +2,6 @@
 layout: photos
 title: Photos
 permalink: /photos/
-chocolat: true
+gallery: photos
 ---
-<div class="masonry chocolat-parent" data-chocolat-title="photos">
- {% for photo in site.photos %}
-  <div class="brick">
-   <a class="chocolat-image" href="{{ site.url }}/images/photos/{{ photo.file }}" title="{{ photo.title}}, {{ photo.year }}">
-    <img width="100" src="{{ site.url }}/images/photos/{{ photo.file }}" alt="{{ photo.title }}, {{ photo.year }}" />
-   </a>
-  </div>
- {% endfor %}
-</div>
-<script>
-	$(document).ready(function(){
-		$('.chocolat-parent').Chocolat({
-			loop: true,
-			imageSize: 'cover',			
-		});
-	});
-</script>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris velit lorem, viverra eu ex sed, consectetur gravida nibh. Integer lacinia viverra mollis. Morbi vehicula nec mauris sed finibus. Donec fermentum odio vel velit efficitur feugiat dapibus semper dolor. Suspendisse ac orci orci. Donec lobortis leo convallis est euismod aliquet et vitae ante.

@@ -1,0 +1,5 @@
+file: basefilename
+
+then in template
+
+{{ photo.file }}-1280.jpg etc
