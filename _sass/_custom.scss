@@ -5,9 +5,8 @@ $x-blue-mid: #6DA0A6;
 $x-blue-light: #96CCD9;
 $x-off-white: #fffff1;
 
-.home p {
-	color: white;
-}
+.home { margin-top: 2em; }
+.home p { color: white; }
 
 .grid-size, .item { width: 49%; margin-bottom: 1%; }
 .gutter-size { width: 2%; }
