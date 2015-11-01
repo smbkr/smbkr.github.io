@@ -3,7 +3,7 @@
 {% include head.html %}
 <body class="site{% if site.animated %} animated fade-in-down{% endif %}">
   {% if page.dark %}
-  <div class="bgimg">&nbsp;</div>
+    {% include dark.html %}
   {% endif %}
   <div class="site-wrap">
     {% include header.html %}
