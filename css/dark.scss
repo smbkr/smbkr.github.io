@@ -1,6 +1,7 @@
 ---
 # Alternate CSS rules for dark homepage
 ---
+@import 'custom';
 
 .site-header {
   background-image: linear-gradient(
@@ -42,6 +43,21 @@
 
 body.site {
   background-color: #000;
+}
+
+.home { margin-top: 2em; }
+.home p { color: white; }
+
+.home p a {
+  color: #fff;
+  border-bottom: 2px solid #fff;
+}
+
+.home p a:hover,
+.home p a:focus,
+.home p a:active {
+  color: $x-blue-light;
+  border: none;
 }
 
 footer {
