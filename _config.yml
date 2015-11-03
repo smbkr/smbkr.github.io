@@ -14,7 +14,7 @@ collections:
     # permalink: /photos/:path/
 
 # Google services
-google_analytics:
+google_analytics: UA-69610877-1
 google_verification: RjfxX1og9_duTvO7eVjw0SfCC-OYoP5R-bRZSHkB6VE
 
 # Optional features
