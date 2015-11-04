@@ -13,9 +13,9 @@ jquery: true
       <div class="gutter-size"></div>
     {% for photo in site.[page.gallery] reversed %}
       <div class="item{% if forloop.first %} item--width2{% endif %}">
-        <a href="/images/photos/{{ photo.file }}-1280.jpg" title="{{ photo.title}}, {{ photo.year }}">
+        <a class="lightbox" href="/images/photos/{{ photo.file }}-1280.jpg" title="{{ photo.title}}, {{ photo.year }}">
         <img src="/images/photos/{{ photo.file }}{% if forloop.first %}-960.jpg{% else %}-640.jpg{% endif %}" alt="{{ photo.title }}, {{ photo.year }}" />
-      </a>
+        </a>
       </div>
     {% endfor %}
     </div>
