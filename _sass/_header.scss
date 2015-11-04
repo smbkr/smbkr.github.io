@@ -11,6 +11,7 @@
 .site-header a {
   color: $x-blue-dark;
   font-size: $h3;
+  border: none;
 }
 
 .site-header .site-title {
@@ -23,6 +24,7 @@
 
 .site-header nav a {
   color: $x-blue-dark;
+  border: none;
 }
 
 .site-header nav a:hover,
