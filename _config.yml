@@ -18,7 +18,7 @@ google_analytics: UA-69610877-1
 google_verification: RjfxX1og9_duTvO7eVjw0SfCC-OYoP5R-bRZSHkB6VE
 
 # Optional features
-animated:             true
+animated:             false
 ajaxify_contact_form: true
 
 # Disqus post comments
