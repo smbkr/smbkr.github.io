@@ -1,6 +1,5 @@
-form(action="#", method="post", id="contact-form")
+form(action="#", id="contact-form")
 	input(type="text", name="_gotcha", id="_gotcha", class="is-hidden")
-	input(type="hidden", name="subject", id="subject", value="Email from www.smbkr.xyz")
 	label.label(for="name") Name
 	p.control
 		input(type="text", pattern=".{2,}", name="name", id="name", placeholder="What should I call you?", class="input fillable")
@@ -13,6 +12,8 @@ form(action="#", method="post", id="contact-form")
 	p.control
 		textarea(name="message", pattern=".{6,}", id="message", placeholder="What would you like to say?", class="textarea fillable")
 		span.help.is-danger.is-invisible Please enter a message
-	p.control.is-pulled-right.buttons
-		button.button.is-medium.is-outlined.is-disabled#clear-button(title="Clear all fields and reset the form") Clear
-		submit.button.is-medium.is-primary#send-button.is-disabled(title="Send your message") Send
+	p.control.is-pulled-right#buttons
+		button(title="Clear all fields and reset the form").button.is-medium.is-outlined.is-disabled#clear-button Clear
+		button(title="Send your message").button.is-medium.is-primary.is-disabled#send-button Send
+	.notification.is-hidden#response-container
+		span#response-text
