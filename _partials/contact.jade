@@ -1,0 +1,18 @@
+form(action="#", method="post", id="contact-form")
+	input(type="text", name="_gotcha", id="_gotcha", class="is-hidden")
+	input(type="hidden", name="subject", id="subject", value="Email from www.smbkr.xyz")
+	label.label(for="name") Name
+	p.control
+		input(type="text", pattern=".{2,}", name="name", id="name", placeholder="What should I call you?", class="input fillable")
+		span.help.is-danger.is-invisible Please enter your name
+	label.label(for="email") Email
+	p.control
+		input(type="email", pattern=".+@.+\.+.{2,}", name="email", id="email", placeholder="How should I get back to you?", class="input fillable")
+		span.help.is-danger.is-invisible Please enter a valid email address
+	label.label(for="message") Message
+	p.control
+		textarea(name="message", pattern=".{6,}", id="message", placeholder="What would you like to say?", class="textarea fillable")
+		span.help.is-danger.is-invisible Please enter a message
+	p.control.is-pulled-right.buttons
+		button.button.is-medium.is-outlined.is-disabled#clear-button(title="Clear all fields and reset the form") Clear
+		submit.button.is-medium.is-primary#send-button.is-disabled(title="Send your message") Send

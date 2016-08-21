@@ -1,0 +1,23 @@
+$family-primary: sans-serif;
+$family-monospace: "Hack", "Source Code Pro", "Monaco", "Inconsolata", monospace;
+
+@import 'node_modules/bulma/bulma.sass';
+@import 'general.scss';
+@import 'contact.scss';
+@import 'footer.scss';
+
+h3
+{
+	text-transform: uppercase;
+}
+
+#skills
+{
+
+	ul
+	{
+		float: left;
+		list-style: circle;
+		margin-left: 0 0 0 1em;
+	}
+}
