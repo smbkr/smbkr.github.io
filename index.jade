@@ -1,37 +1,42 @@
 doctype
 html
 	head
-		link(rel="stylesheet" href="/main.css")
-		script(src="main.js")
+		meta(name="viewport", content="width=device-width, initial-scale=1")
+		link(rel="stylesheet" href="style/main.css")
 		title Stuart M. Baker &ndash; Web Developer
 	body
-		#intro
-			h1 Stuart M. Baker
-			h2 Web Developer
+		section.section#intro
+			.container
+				.heading
+					h1.title Stuart M. Baker
+					h2.subtitle Web Developer
+				.content.is-medium
+					p Hi, I'm Stuart. I'm a web developer currently living and working in Edinburgh. I work with PHP, Javascript, HTML5, CSS3 & #[a(href="#skills") other technologies] to produce reponsive, well structured and secure web applications.
 
-		#skills
-			ul
-				li LRDf
-				li rhuowe
-				li ashduagt4
-				li urg24tgqa
-				li jhqgrhjk3gt
-				li asjkdhaskjd
-				li jkegthwejt
-				li jkaghjf
-				li jkeghjesgthj
-				li rjkegjhr
-				li egtrwjktq
-				li ajhghjea
-				li tjhwgethjwe
-				li hthjwgtwg
-				li gthj
-				li wghtj3rhyj
-				li tegjr
-				li tghrwhjtg
+		section.section#skills
+			.container.is-clearfix
+				h3.subtitle Skills
+				ul
+					each skill in skills
+						li= skill
 
-		#history
-			each item in items
-				include _item.jade
+		section.section#history
+			.container
+				each job, index in jobs
+					include _partials/job.jade
+
+		section.section#contact
+			.container.is-clearfix
+				include _partials/contact.jade
+
+		section.section#footer
+			.container
+				span &copy; 2016 Stuart M. Baker.
+				a(href="#intro").is-pulled-right To top?
 		
-		include _contact.jade
+		if environment === 'production'
+			script(src="//code.jquery.com/jquery-3.1.0.min.js")
+		else
+			script(src="//code.jquery.com/jquery-3.1.0.js")
+		
+		script(src="js/main.js")

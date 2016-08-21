@@ -1,7 +1,7 @@
 {
 	"index": {
 		"layout": false,
-		"items": [
+		"jobs": [
 			{
 				"id": "lorem",
 				"title": "Lorem"
@@ -10,6 +10,27 @@
 				"id": "ipsum",
 				"title": "Ipsum"
 			}
+		],
+		"skills": [
+			"PHP",
+			"Javascript",
+			"jQuery",
+			"Vue.js",
+			"HTML5",
+			"CSS3",
+			"SASS/SCSS",
+			"CSS-Crush",
+			"Bootstrap",
+			"git",
+			"MVC",
+			"Laravel",
+			"Agile",
+			"Node.js & NPM",
+			"Linux",
+			"REST",
+			"Object-oriented programming",
+			"RESTful APIs",
+			"Responsive design"
 		]
 	}
 }
