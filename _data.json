@@ -1,0 +1,15 @@
+{
+	"index": {
+		"layout": false,
+		"items": [
+			{
+				"id": "lorem",
+				"title": "Lorem"
+			},
+			{
+				"id": "ipsum",
+				"title": "Ipsum"
+			}
+		]
+	}
+}

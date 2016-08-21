@@ -1,0 +1,43 @@
+@import 'node_modules/normalize.css/normalize';
+
+$font-family: "Helvetica", sans-serif;
+$font-size: 19px;
+$colour-primary: rgba(38,198,218 ,1);
+$colour-secondary: rgba(126,87,194 ,1);
+$colour-text: #fff;
+
+html,
+body
+{
+	box-sizing: border-box;
+	font-size: $font-size;
+	font-family: $font-family;
+	padding: 1em;
+	background: linear-gradient($colour-secondary 0%, $colour-primary 10%);
+	color: $colour-text;
+}
+
+.hidden
+{
+	display: none;
+}
+
+button,
+input,
+textarea
+{
+	border: 1px solid;
+	border-radius: 2px;
+	display: block;
+}
+
+button
+{
+	background: transparent;
+}
+
+input,
+textarea
+{
+	background-color: transparent;
+}

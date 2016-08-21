@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "normalize.css": "^4.2.0"
+  },
+  "devDependencies": {
+    "harp": "github:sintaxi/harp#v0.21.0-pre"
+  }
+}
