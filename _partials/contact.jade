@@ -12,8 +12,9 @@ form(action="#", id="contact-form")
 	p.control
 		textarea(name="message", pattern=".{6,}", id="message", placeholder="What would you like to say?", class="textarea fillable")
 		span.help.is-danger.is-invisible Please enter a message
-	p.control.is-pulled-right#buttons
-		button(title="Clear all fields and reset the form").button.is-medium.is-outlined.is-disabled#clear-button Clear
-		button(title="Send your message").button.is-medium.is-primary.is-disabled#send-button Send
-	.notification.is-hidden#response-container
+	p.control.is-clearfix#buttons
+		button(title="Send your message").button.is-medium.is-primary.is-disabled.is-pulled-right#send-button Send
+		button(title="Clear all fields and reset the form").button.is-medium.is-outlined.is-disabled.is-pulled-right#clear-button Clear
+	.control.notification.is-hidden#response-container
+		button.delete
 		span#response-text

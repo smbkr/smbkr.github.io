@@ -55,7 +55,10 @@ function resetForm() {
 
 function disableForm() {
 	$('.fillable').each(function() {
-		$(this).prop('disabled');
+		$(this).prop('disabled', true);
+	})
+	$('#buttons').children('button').each(function() {
+		$(this).addClass('is-disabled');
 	})
 }
 
@@ -110,6 +113,14 @@ $('#clear-button').click(function(e) {
 })
 
 /**
+ * Click handler for the notification close button
+ */
+$('.notification .delete').click(function(e) {
+	e.preventDefault();
+	$(this).parents('.notification').addClass('is-hidden');
+})
+
+/**
  * Submit handler for the form
  */
 $('#send-button').click(function(e) {
@@ -137,15 +148,12 @@ $('#send-button').click(function(e) {
 		success: function(data) {
 			$('#send-button').removeClass('is-loading');
 			disableForm();
-			$('#buttons').remove();
 			$('#response-container').addClass('is-success');
 			$('#response-container').removeClass('is-hidden');
 			$('#response-text').html("Thanks! Your message was sent.");
 		},
 		error: function(err) {
 			$('#send-button').removeClass('is-loading');
-			disableForm();
-			$('#buttons').remove();
 			$('#response-container').addClass('is-danger');
 			$('#response-container').removeClass('is-hidden');
 			$('#response-text').html("Uh-oh! Something went wrong... Please try again later.");
