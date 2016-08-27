@@ -7,7 +7,7 @@
     "harp": "github:sintaxi/harp#v0.21.0-pre"
   },
   "scripts": {
-    "dev": "harp server --port 9001 & browser-sync start --proxy 'localhost:9001' --files '**/*.jade, **/*.scss, **/*.json, **/*.js' --no-notify",
-    "build": "rm -rf www/ && harp compile ."
+    "dev": "harp server _src --port 9001 & browser-sync start --proxy 'localhost:9001' --files '**/*.jade, **/*.scss, **/*.json, **/*.js' --no-notify",
+    "build": "harp compile _src www/"
   }
 }

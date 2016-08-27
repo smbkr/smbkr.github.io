@@ -1,0 +1,46 @@
+#contact
+{
+	background: #f9f9f9;
+
+	#contact-form
+	{
+		width: 80%;
+		margin: 0 auto;
+
+		label
+		{
+			text-transform: uppercase;
+		}
+
+		.control
+		{
+			margin-bottom: 1px;
+		}
+
+		#buttons
+		{
+			*
+			{
+				margin-left: 10px;
+			}
+		}
+
+		#response-container
+		{
+			margin-top: 16px;
+		}
+
+		input[disabled]
+		{
+			color: #d3d6db;
+		}
+	}
+
+	@media screen and (max-width: $tablet)
+	{
+		#contact-form
+		{
+			width: 100%;
+		}
+	}
+}

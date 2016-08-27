@@ -1,16 +1,16 @@
 {
 	"index": {
 		"layout": false,
+
 		"jobs": [
 			{
-				"id": "lorem",
-				"title": "Lorem"
-			},
-			{
-				"id": "ipsum",
-				"title": "Ipsum"
+				"employer": "",
+				"title": "Lorem",
+				"dates": "",
+				"description": ""
 			}
 		],
+
 		"skills": [
 			"PHP",
 			"Javascript",
@@ -27,8 +27,8 @@
 			"Node.js & NPM",
 			"Linux",
 			"MVC/MVVM",
-			"Object-oriented programming",
 			"RESTful APIs",
+			"Object-oriented programming",
 			"Responsive design"
 		]
 	}
