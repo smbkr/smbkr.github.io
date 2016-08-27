@@ -13,9 +13,9 @@ html
 				.content.is-medium
 					p Hi, I'm Stuart. I'm a web developer currently living and working in Edinburgh. I work with PHP, Javascript, HTML5, CSS3 & #[a(href="#skills") other technologies] to produce reponsive, well structured and secure web applications.
 				.content
-					p My skills are all self-taught. I've been working professionally as a developer for about a year, and learning for at least five years on-and-off.
+					p My skills are all self-taught. I've been working professionally as a developer for about a year, and learning for at least five years in my spare time. The first website I ever made was a #[span.proper-title Chrono Trigger] fan site. Sadly, it's no longer online. My other interests include photography, cooking &amp; #[span#bd]ad jokes.
 
-		section.section#skills
+		section.section.callout-bg#skills
 			.container.is-clearfix
 				h3.subtitle Skills
 				ul
@@ -24,11 +24,13 @@ html
 
 		section.section#history
 			.container
+				h3.subtitle Work History
 				each job, index in jobs
 					include _partials/job.jade
 
-		section.section#contact
+		section.section.callout-bg#contact
 			.container.is-clearfix
+				h3.subtitle Contact Me
 				include _partials/contact.jade
 
 		section.section#footer

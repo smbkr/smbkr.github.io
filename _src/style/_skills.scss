@@ -8,9 +8,16 @@
 
 		li
 		{
-			flex: 0 0 calc(25% - 1em);
-			margin-left: 1em;
-			margin-bottom: 0.2em;
+			flex: 0 0 calc(25% - 2em);
+			margin: 0 1em;
+			@media screen and (max-width: $desktop)
+			{
+				flex: 0 0 calc(33% - 2em);
+			}
+			@media screen and (max-width: $tablet)
+			{
+				flex: 0 0 calc(50% - 2em);
+			}
 		}
 	}
 }

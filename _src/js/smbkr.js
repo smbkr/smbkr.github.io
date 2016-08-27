@@ -178,4 +178,18 @@ $('#send-button').click(function(e) {
 			$('#response-text').html("Uh-oh! Something went wrong... Please try again later.");
 		}
 	});
-})
+});
+
+(function bd(c) {
+	$('#bd').html(c);
+
+	if (c === 'b') {
+		c = 'd';
+	} else {
+		c = 'b';
+	}
+
+	setTimeout(function() {
+		bd(c);
+	}, 2500);
+})('d');
