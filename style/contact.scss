@@ -25,6 +25,11 @@
 	{
 		margin-top: 16px;
 	}
+
+	input[disabled]
+	{
+		color: #d3d6db;
+	}
 }
 
 @media screen and (max-width: $tablet)

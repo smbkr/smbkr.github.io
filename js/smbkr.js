@@ -12,6 +12,8 @@
 
 /**
  * Shamelessly stolen from https://davidwalsh.name/javascript-debounce-function
+ * 
+ * @return function
  */
 function debounce(func, wait, immediate) {
 	var timeout;
@@ -28,6 +30,12 @@ function debounce(func, wait, immediate) {
 	};
 };
 
+/** 
+ * Validates value of given element against the pattern set in the pattern
+ * attribute.
+ * 
+ * @return bool
+ */
 function validatePattern(e) {
 	var value = $(e).val();
 	var pattern = new RegExp($(e).attr('pattern'));
@@ -42,6 +50,8 @@ function validatePattern(e) {
 /**
  * Reset the value of all inputs, remove any validation classes & messages, and
  * disables the send and clear buttons.
+ * 
+ * @return void
  */
 function resetForm() {
 	$('.fillable').each(function() {
@@ -53,6 +63,11 @@ function resetForm() {
 	$('#clear-button').addClass('is-disabled');
 }
 
+/**
+ * Disables input elements and buttons on the form.
+ * 
+ * @return void
+ */
 function disableForm() {
 	$('.fillable').each(function() {
 		$(this).prop('disabled', true);
@@ -81,11 +96,15 @@ $('.fillable').each(function() {
 				$(this).siblings('.help').removeClass('is-invisible');
 			}
 
-			// Enable the clear button if input is not empty
-			if ($(this).val().length) {
+			// Enable the clear button if any input has been filled in
+			var fieldsFilled = false;
+			$('.fillable').each(function() {
+				if ($(this).val().length) {
+					fieldsFilled = true;
+				}
+			})
+			if (fieldsFilled) {
 				$('#clear-button').removeClass('is-disabled');
-			} else {
-				$('#clear-button').addClass('is-disabled');
 			}
 
 			// Check all fields are valid, if so enable the send button
@@ -126,7 +145,7 @@ $('.notification .delete').click(function(e) {
 $('#send-button').click(function(e) {
 	e.preventDefault();
 
-	var url = 'https://formspree.io/stuart@smbkr.xyz';
+	var url = $('#contact-form').attr('action');
 	var subject = "smbkr.xyz - Contact submission"
 	var email = $('#email').val();
 	var name = $('#name').val();
