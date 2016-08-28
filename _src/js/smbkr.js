@@ -105,6 +105,9 @@ $('.fillable').each(function() {
 			})
 			if (fieldsFilled) {
 				$('#clear-button').removeClass('is-disabled');
+			} else
+			{
+				$('#clear-button').addClass('is-disabled');
 			}
 
 			// Check all fields are valid, if so enable the send button
@@ -138,6 +141,13 @@ $('.notification .delete').click(function(e) {
 	e.preventDefault();
 	$(this).parents('.notification').addClass('is-hidden');
 })
+
+/**
+ * Prevent enter key from sending the form
+ */
+$(document).on("keypress", "form", function(e) { 
+    return e.keyCode != 13;
+});
 
 /**
  * Submit handler for the form
@@ -180,6 +190,9 @@ $('#send-button').click(function(e) {
 	});
 });
 
+/** 
+ * switches b for d every 1250ms in 'bad jokes/dad jokes' part of intro
+ */
 (function bd(c) {
 	$('#bd').html(c);
 
