@@ -1,0 +1,44 @@
+{
+	"index": {
+		"layout": false,
+
+		"jobs": [
+			{
+				"employer": "Trendzer",
+				"employerurl": "http://www.trendzer.io",
+				"title": "Junior developer & technical support",
+				"from": "Jan 2016",
+				"to": "Present",
+				"description": [
+					"Trendzer provides a market-leading website platform with integrated ecommerce and booking systems, cloud services and digital marketing.",
+					"At Trendzer, I've had the opportunity to develop the in-house CMS using PHP, JavaScript, HTML and CSS, providing a platform where users create interactive and responsive websites using a drag-and-drop interface. I've also faced other challenges, such as solving email delivery for thousands of messages per day, integrating payment systems supporting international transactions, and dipped my feet into web application security, both preparing for and responding to external pen-testing.",
+					"One of the projects I have tackled recently has involved re-writing large sections of the CMS platform's UI to the spec written by our UX designer to create an intuitive and streamlined experience.",
+					"I also have full-responsibility for managing technical support for our major partners, based both in the UK and internationally, responding to all enquiries within SLA to minimise customer disruption, investigating new bugs & issues to locate the cause, and reporting these in our bug-tracking tools."
+				]
+			}
+		],
+
+		"skills": [
+			"PHP",
+			"Javascript",
+			"jQuery",
+			"Vue.js",
+			"HTML5",
+			"CSS3",
+			"SASS & SCSS",
+			"CSS Crush",
+			"Jade",
+			"Bootstrap",
+			"git",
+			"Laravel",
+			"Agile",
+			"NPM",
+			"Linux",
+			"MVC & MVVM",
+			"REST APIs",
+			"AJAX",
+			"OOP",
+			"Responsive design"
+		]
+	}
+}
