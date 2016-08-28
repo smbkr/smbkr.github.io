@@ -1,4 +1,15 @@
 #footer
 {
 	font-size: $size-7;
+
+	#about
+	{
+		margin-bottom: 4px;
+	}
+
+	a#top,
+	a#top:visited
+	{
+		color: $blue;
+	}
 }
