@@ -5,18 +5,26 @@
 		display: flex;
 		flex-wrap: wrap;
 		list-style: circle;
+		word-wrap: break-word;
 
 		li
 		{
-			flex: 0 0 calc(25% - 2em);
+			word-wrap: break-word;
+			flex-grow: 0;
+			flex-shrink: 0;
+			flex-basis: calc(20% - 2em);
 			margin: 0 1em;
 			@media screen and (max-width: $desktop)
 			{
-				flex: 0 0 calc(33% - 2em);
+				flex-basis: calc(25% - 2em);
 			}
 			@media screen and (max-width: $tablet)
 			{
-				flex: 0 0 calc(50% - 2em);
+				flex-basis: calc(33% - 2em);
+			}
+			@media screen and (max-width: 400px)
+			{
+				flex-basis: calc(50% - 2em);
 			}
 		}
 	}

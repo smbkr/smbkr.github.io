@@ -3,34 +3,41 @@ html
 	head
 		meta(name="viewport", content="width=device-width, initial-scale=1")
 		link(rel="stylesheet" href="style/smbkr.css")
-		title Stuart M. Baker &ndash; Web Developer
+		title Stuart M. Baker&mdash;Web Developer
 	body
 		section.section#intro
 			.container
 				.heading
-					h1.title Stuart M. Baker
-					h2.subtitle Web Developer
+					h1.title.is-1 Stuart M. Baker
+					h2.subtitle.is-3 Web Developer
 				.content.is-medium
 					p Hi, I'm Stuart. I'm a web developer currently living and working in Edinburgh. I work with PHP, Javascript, HTML5, CSS3 & #[a(href="#skills") other technologies] to produce reponsive, well structured and secure web applications.
 				.content
-					p My skills are all self-taught. I've been working professionally as a developer for about a year, and learning for at least five years in my spare time. The first website I ever made was a #[span.proper-title Chrono Trigger] fan site. Sadly, it's no longer online. My other interests include photography, cooking &amp; #[span#bd]ad jokes.
+					p My skills are all self-taught. I've been working professionally as a developer for about a year, and learning for at least five years in my spare time. The first website I can remember making was a #[span.proper-title Chrono Trigger] fan site when I was 12. Sadly, it's no longer online. My other interests include photography, cooking &amp; #[span#bd d]ad jokes.
 
 		section.section.callout-bg#skills
 			.container.is-clearfix
-				h3.subtitle Skills
+				h3.subtitle.is-4 Skills
 				ul
 					each skill in skills
 						li= skill
 
 		section.section#history
 			.container
-				h3.subtitle Work History
+				h3.subtitle.is-4 Work History
 				each job, index in jobs
 					include _partials/job.jade
+				.item#other-history
+					.heading
+						h5.title.is-5 Other Skills &amp; Previous Experience
+					.content
+						p Prior to beginning my career as a developer, I worked in finance and insurance, and in retail before that.
+						p I studied at #[span.proper-title the University of Queensland], graduating in 2014 with a Bachelor of Arts, majoring in #[em journalism &amp; mass-communication] and #[em German]. I also spent a year studying at #[span.proper-title Albert-Ludwigs Universität, Freiburg, Germany], in order to focus on my German language skills.
+						p If you'd like to know more, you can download or print #[a(href='#') a PDF copy of my resume].
 
 		section.section.callout-bg#contact
 			.container.is-clearfix
-				h3.subtitle Contact Me
+				h3.subtitle.is-4 Contact Me
 				include _partials/contact.jade
 
 		section.section#footer

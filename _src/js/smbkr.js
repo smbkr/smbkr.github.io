@@ -191,5 +191,5 @@ $('#send-button').click(function(e) {
 
 	setTimeout(function() {
 		bd(c);
-	}, 2500);
+	}, 1250);
 })('d');
