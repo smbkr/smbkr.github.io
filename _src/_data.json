@@ -18,6 +18,25 @@
 			}
 		],
 
+		"projects": [
+			{
+				"title": "PeopleThing",
+				"repo": "https://github.com/smbkr/PeopleThing",
+				"description": ["PeopleThing is a simple PHP app made to demonstrate some of my skills. The app allows a user to input their details, which are saved to an SQLite database. Another user can then view and sort a list of users who have submitted their details. The backend exposes the data via a RESTful interface, and is consumed via ajax request by the front-end, which is powered by Vue.js."],
+				"skills": [
+					"PHP",
+					"PHPUnit",
+					"Composer",
+					"Javascript",
+					"Vue.js",
+					"MVC/MVVM",
+					"SQLite",
+					"Ajax",
+					"REST"
+				]
+			}
+		],
+
 		"skills": [
 			"PHP",
 			"Javascript",
