@@ -38,6 +38,12 @@ html
 						p I studied at #[span.proper-title the University of Queensland], graduating in 2014 with a Bachelor of Arts, majoring in #[em journalism &amp; mass-communication] and #[em German]. I also spent a year studying at #[span.proper-title Albert-Ludwigs Universität, Freiburg, Germany], in order to focus on my German language skills.
 						p If you'd like to know more, you can download or print #[a(href='https://drive.google.com/open?id=0B_prtqli0jEybTVIb1I3enh1WWs') a PDF copy of my CV], or if you'd like to get in touch, just use #[a(href='#contact') the form below].
 
+		section.section#projects
+			.container
+				h3.subtitle.is-4 Projects
+				each project, index in projects
+					include _partials/project.jade
+
 		section.section.callout-bg#contact
 			.container.is-clearfix
 				h3.subtitle.is-4 Contact Me
